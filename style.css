@@ -1,0 +1,215 @@
+/* Base Layout */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0e0e15;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #101828;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: #cce3ff;
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+nav a:hover {
+  color: #4da6ff;
+  text-decoration: underline;
+  background-color: rgba(77, 166, 255, 0.1);
+}
+
+/* Container Styling */
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #141b2e;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(20, 40, 80, 0.3);
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #7db2ff;
+}
+
+h1 {
+  border-bottom: 2px solid #2d3e60;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+h2 {
+  margin-top: 30px;
+}
+
+/* Highlight Boxes */
+.highlight-box {
+  background-color: #1a2238;
+  border-left: 4px solid #4d79ff;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 0 5px 5px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Feature Lists */
+ul.features {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul.features li {
+  padding: 8px 0;
+  padding-left: 30px;
+  position: relative;
+}
+
+ul.features li:before {
+  content: "➤";
+  color: #7db2ff;
+  position: absolute;
+  left: 0;
+}
+
+/* Buttons */
+.join-button {
+  display: inline-block;
+  background-color: #1a3e72;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  border: 1px solid #2d3e60;
+}
+
+.join-button:hover {
+  background-color: #2a5aa7;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(77, 121, 255, 0.3);
+  text-decoration: none;
+}
+
+/* Sign-off */
+.sign-off {
+  font-style: italic;
+  text-align: right;
+  margin-top: 30px;
+  font-size: 1.2em;
+  color: #a8ccff;
+}
+
+/* Link Styling */
+a {
+  color: #7db2ff;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #a8ccff;
+  text-decoration: underline;
+}
+
+/* War Entry Boxes - Existing Styles */
+.war-entry {
+  background-color: #1a2238;
+  border: 1px solid #2d3e60;
+  border-left: 6px solid #4d79ff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 20, 50, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.war-entry:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(77, 121, 255, 0.2);
+}
+
+/* War Images - Existing Styles */
+.war-entry img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 1rem;
+  border: 1px solid #2d3e60;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    padding: 0.8rem;
+  }
+  
+  nav a {
+    margin: 0 10px;
+    font-size: 0.9rem;
+  }
+  
+  .container {
+    padding: 1.5rem;
+    margin: 1rem auto;
+  }
+  
+  .join-button {
+    padding: 10px 20px;
+  }
+}
+
+/* Add to style.css */
+body {
+  cursor: default;
+  overflow-x: hidden;
+}
+
+/* Add to style.css */
+.bubble {
+  position: fixed;
+  background: rgba(125, 178, 255, 0.6);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  animation: bubble-rise 1.5s ease-out forwards;
+}
+
+@keyframes bubble-rise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100px) scale(0.3);
+    opacity: 0;
+  }
+}
+
+@keyframes bubble-rise {
+  0% {
+    transform: translate(0, 0) scale(0.8);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-15px, -80px) scale(0.3);
+    opacity: 0;
+  }
+}

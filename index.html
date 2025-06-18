@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KolonialMarine</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+
+// Add before </body>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  let lastBubbleTime = 0;
+  
+  document.addEventListener('mousemove', (e) => {
+    const now = Date.now();
+    // Create bubbles every 150ms while moving
+    if (now - lastBubbleTime > 150) {
+      createBubble(e.clientX, e.clientY);
+      lastBubbleTime = now;
+    }
+  });
+  
+  function createBubble(x, y) {
+    const bubble = document.createElement('div');
+    bubble.className = 'bubble';
+    
+    // Randomize bubble properties
+    const size = 5 + Math.random() * 10;
+    bubble.style.width = `${size}px`;
+    bubble.style.height = `${size}px`;
+    bubble.style.left = `${x - size/2}px`;
+    bubble.style.top = `${y - size/2}px`;
+    
+    // Random slight horizontal movement
+    bubble.style.setProperty('--x-offset', (Math.random() * 20 - 10) + 'px');
+    
+    document.body.appendChild(bubble);
+    
+    // Remove after animation completes
+    setTimeout(() => bubble.remove(), 1500);
+  }
+});
+</script>
+
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="wars.html">Past Wars</a>
+    <a href="media.html">Media</a>
+  </nav>
+  <div class="container">
+    <h1>Welcome to KolonialMarine's Official Website!</h1>
+    
+    <div class="highlight-box">
+      <p>Welcome to the KolonialMarine [KM] - Foxhole's Top Tier & Combined Arms Regiment!</p>
+    </div>
+    
+    <p>Welcome Colonial! Are you looking for a regiment that dominates the seas and shores of Foxhole? Look no further than the KolonialMarine (KM), where we specialize in large-scale naval operations and naval dominance.</p>
+    
+    <h2>Why Join KolonialMarine?</h2>
+    <p>Whether you're a hardened veteran or a fresh recruit, there's a place for you in our fleet. We offer:</p>
+    
+    <ul class="features">
+      <li>A structured naval warfare experience</li>
+      <li>Opportunities for leadership and specialization</li>
+      <li>A balance between casual play and competitive operations</li>
+      <li>A welcoming community of like-minded sailors and soldiers</li>
+    </ul>
+    
+    <h2>Our Specializations</h2>
+    
+    <h3>Naval Warfare</h3>
+    <p>Gunboats, Destroyers, Submarines, Battleships and we unleash devastating artillery barrages from the sea. Our naval operations are the backbone of colonial naval dominance.</p>
+    
+    <h3>Amphibious Assaults</h3>
+    <p>We do beachhead operations, securing enemy shores. We specialize in turning naval superiority into ground gains.</p>
+    
+    <h3>Air Support</h3>
+    <p>Work with our fleet's aviation wing to provide reconnaissance, close air support, and rapid troop deployment. Our combined arms approach ensures complete sea coverage.</p>
+    
+    <h3>Combined Arms Operations</h3>
+    <p>From coastal sieges to open-ocean engagements, we integrate naval, ground, and air power to crush the enemy through superior coordination.</p>
+    
+    <h2>Our Culture</h2>
+    <div class="highlight-box">
+      <p>At [KM], we strike the perfect balance between relaxed gameplay and high-stakes warfare:</p>
+      <ul class="features">
+        <li><strong>Casual Play:</strong> Hop online anytime and find a crew for naval ops, logistics, or coastal defense—no pressure, just fun.</li>
+        <li><strong>Competitive Edge:</strong> Our skill ranking system ensures that our most experienced members partake in critical operations.</li>
+      </ul>
+    </div>
+    
+    <h2>Ready to Enlist?</h2>
+    <p>Prove yourself in battle, and you'll be called upon for elite missions that shape the front or join up as a casual player. Carve your name in the history books of naval warfare!</p>
+    
+    <div style="text-align: center;">
+      <a href="https://joinkm.com" class="join-button">Join the Fleet Today!</a>
+    </div>
+    
+    <p class="sign-off">o7<br>KolonialMarine Command (feat. AI)</p>
+  </div>
+</body>
+</html> 

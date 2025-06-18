@@ -1,0 +1,103 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About KolonialMarine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+// Add before </body>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  let lastBubbleTime = 0;
+  
+  document.addEventListener('mousemove', (e) => {
+    const now = Date.now();
+    // Create bubbles every 150ms while moving
+    if (now - lastBubbleTime > 150) {
+      createBubble(e.clientX, e.clientY);
+      lastBubbleTime = now;
+    }
+  });
+  
+  function createBubble(x, y) {
+    const bubble = document.createElement('div');
+    bubble.className = 'bubble';
+    
+    // Randomize bubble properties
+    const size = 5 + Math.random() * 10;
+    bubble.style.width = `${size}px`;
+    bubble.style.height = `${size}px`;
+    bubble.style.left = `${x - size/2}px`;
+    bubble.style.top = `${y - size/2}px`;
+    
+    // Random slight horizontal movement
+    bubble.style.setProperty('--x-offset', (Math.random() * 20 - 10) + 'px');
+    
+    document.body.appendChild(bubble);
+    
+    // Remove after animation completes
+    setTimeout(() => bubble.remove(), 1500);
+  }
+});
+</script>
+
+
+
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="wars.html">Past Wars</a>
+    <a href="media.html">Media</a>
+  </nav>
+  
+  <div class="container">
+    <h1>Our Naval Legacy</h1>
+    
+    <div class="timeline">
+      <div class="timeline-event">
+        <h2>War 124: The Beginning</h2>
+        <p>What would become KolonialMarine began as a simple idea between two friends during War 124. Myself and Kuroko (known by many names throughout the wars) saw the greatness in a strong navy</p>
+        <p>We preferred the sleek designs and superior aesthetics of Colonial ships which is why we decided to deflect from the Wardens</p>
+        
+      </div>
+      
+      <div class="timeline-event">
+        <h2>The Kuroko Principle</h2>
+         <p>Kuroko earned his position through that rare combination of:</p>
+  <ul class="features">
+    <li>Actual competence when he could be bothered to wake up</li>
+    <li>A mysterious ability to be exactly where needed (usually after three reminder pings)</li>
+    <li>The tactical patience of someone who'd rather let others do the work</li>
+
+  </ul>
+     <p>To this day, Kuroko remains our silent Admiral, awake for critical operations, and never, ever using voice comms. </p>
+      </div>
+      
+     
+      
+      <div class="timeline-event">
+        <h2>War 125: Official Founding</h2>
+        <p>The KolonialMarine was formally established at the start of War 125. What began as two friends discussing naval stuff had grown into a full-fledged regiment with:</p>
+        
+        <ul class="features">
+          <li>Regular naval operations</li>
+          <li>A core group of dedicated naval specialists</li>
+        </ul>
+      </div>
+      
+
+    
+    <div class="sign-off">
+      <p>o7</p>
+      <p>- Founder of KolonialMarine (feat. AI)  </p>
+    </div>
+  </div>
+</body>
+</html>
+  </div>
+</body>
+</html>
